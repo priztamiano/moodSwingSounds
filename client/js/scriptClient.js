@@ -3,17 +3,22 @@ window.onload = function() {
     showQuestion()
 }
 
+// Función que carga el nombre de user al clickear el primer botón
 function loadName() {
     let nameInput = document.getElementById("nameInput");
     let nameTag = document.getElementById("nameTag");
     let buttonStart = document.getElementById("buttonStart");
-    let start = document.getElementById("start");
+    let pName = document.getElementById("pName");
     buttonStart.addEventListener("click", () => {
         nameTag.innerText = `Bienvenid@ ${nameInput.value}`;
-        start.style.display = "none"
+        let buttonNext = document.getElementById("buttonNext");
+        buttonNext.style.display = "inline-block";
     })
 }
 
+
+
+// Función que muestra la primer pregunta
 function showQuestion() {
     let request = new XMLHttpRequest();
     request.open('GET', '/questions');
@@ -27,8 +32,11 @@ function showQuestion() {
     
 }
 
+// Función que muestra la siguiente pregunta al hacer click en el botón
 function nextQuestion() {
+    buttonNext.addEventListener('click', () => {
 
+    })
 }
 
 function moodResult() {

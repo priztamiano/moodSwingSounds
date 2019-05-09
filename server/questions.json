@@ -6,19 +6,19 @@
             [
                 {
                     "happy" : "Con café y tostadas",
-                    "img" : ""
+                    "img" : "coffee.svg"
                 },
                 {
                     "sad" : "Levantándome a la hora que debería estar viajando",
-                    "img" : ""
+                    "img" : "nightime.svg"
                 },
                 {
                     "angry" : "Como en 'Un día de Furia'",
-                    "img" : ""
+                    "img" : "profanity.svg"
                 },
                 {    
                     "bored" : "Aburrid@ de la rutina",
-                    "img": ""
+                    "img": "weeping.svg"
                 }
             ]
     },    
@@ -51,42 +51,42 @@
         "answers" :
             [
                 {
-                    "happy" : "Con café y tostadas",
+                    "happy" : "",
                     "img" : ""
                 },
                 {
-                    "sad" : "Levantándome a la hora que debería estar viajando",
+                    "sad" : "",
                     "img" : ""
                 },
                 {
-                    "angry" : "Como en 'Un día de Furia'",
+                    "angry" : "",
                     "img" : ""
                 },
                 {    
-                    "bored" : "Aburrid@ de la rutina",
+                    "bored" : "",
                     "img": ""
                 }
             ]
     },
     {
-        "id" : 6,
+        "id" : 4,
         "question" : "Qué gif identifica mejor tu día hasta ahora?",
         "answers" : [
                 {
-                    "happy" : "hacking.gif",
-                    "img" : ""
+                    "happy" : "",
+                    "img" : "hacking.gif"
                 },
                 {
-                    "sad" : "this-is-fine.gif",
-                    "img" :""
+                    "sad" : "",
+                    "img" : "this-is-fine.gif"
                 },
                 {
-                    "angry" : "window.gif",
-                    "img" : ""
+                    "angry" : "",
+                    "img" : "window.gif"
                 },
                 {
-                    "bored" : "thinking.gif",
-                    "img" : ""
+                    "bored" : "",
+                    "img" : "thinking.gif"
                 }
         ]
     }

@@ -21,16 +21,23 @@
             </nav>
         </header>
                 
+        <div class="flex-container">
         <!-- START -->
         <div id="start" class="start">
             <div class="start-content">
-                <p>Tu nombre &#8671</p>
+                <p>&#8671 Tu nombre &#8671</p>
                 <input type="text" id="nameInput" name="nameInput">
-                <a id="buttonStart" class="buttonOne bouncy">Jugar !</a>
+                <a id="buttonStart" class="buttonOne bouncy" href="#mainContainer">Jugar !</a>
             </div>
         </div>    
         <!-- END START -->
         
+        <!-- VIDEO OF THE DAY -->
+        <div id="buttonRandom" class="buttonOne buttonBig">Video Random del Día</div>
+        <div id="videoOfTheDay" class="video-of-the-day"></div>
+        <!-- END VIDEO OF THE DAY -->
+        </div>
+
         <svg id="curve" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1401 446.64">
         <defs>
             <linearGradient id="gradient">
@@ -47,13 +54,15 @@
         <!-- QUIZ CONTAINER -->
         <div id="mainContainer" class="main-container">
             <div id="nameTag"></div>
-            <div id="question"></div>
-            <div id="answers">
-                <div id="happy"></div>
-                <div id="sad"></div>
-                <div id="angry"></div>
-                <div id="bored"></div>
+            <div class="img-question" id="imgQuestion"></div>
+            <div class="question" id="question"></div>
+            <div class="answers" id="answers">
+                <div class="happy"></div>
+                <div class="sad"></div>
+                <div class="angry"></div>
+                <div class="bored"></div>
             </div>
+            <a id="buttonNext" class="buttonOne bouncy">Siguiente !</a>
         </div>
         <!-- END QUIZ CONTAINER -->
 
