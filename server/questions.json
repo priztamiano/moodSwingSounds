@@ -1,0 +1,93 @@
+[
+    {   
+        "id" : 1,
+        "question" : "Cómo empezó tu mañana?",
+        "answers" :
+            [
+                {
+                    "happy" : "Con café y tostadas",
+                    "img" : ""
+                },
+                {
+                    "sad" : "Levantándome a la hora que debería estar viajando",
+                    "img" : ""
+                },
+                {
+                    "angry" : "Como en 'Un día de Furia'",
+                    "img" : ""
+                },
+                {    
+                    "bored" : "Aburrid@ de la rutina",
+                    "img": ""
+                }
+            ]
+    },    
+    {
+        "id" : 2,
+        "question" : "",
+        "answers" :
+            [
+                {
+                    "happy" : "",
+                    "img" : ""
+                },
+                {
+                    "sad" : "",
+                    "img" : ""
+                },
+                {
+                    "angry" : "",
+                    "img" : ""
+                },
+                {    
+                    "bored" : "",
+                    "img": ""
+                }
+            ]
+    },
+    {
+        "id" : 3,
+        "question" : "",
+        "answers" :
+            [
+                {
+                    "happy" : "Con café y tostadas",
+                    "img" : ""
+                },
+                {
+                    "sad" : "Levantándome a la hora que debería estar viajando",
+                    "img" : ""
+                },
+                {
+                    "angry" : "Como en 'Un día de Furia'",
+                    "img" : ""
+                },
+                {    
+                    "bored" : "Aburrid@ de la rutina",
+                    "img": ""
+                }
+            ]
+    },
+    {
+        "id" : 6,
+        "question" : "Qué gif identifica mejor tu día hasta ahora?",
+        "answers" : [
+                {
+                    "happy" : "hacking.gif",
+                    "img" : ""
+                },
+                {
+                    "sad" : "this-is-fine.gif",
+                    "img" :""
+                },
+                {
+                    "angry" : "window.gif",
+                    "img" : ""
+                },
+                {
+                    "bored" : "thinking.gif",
+                    "img" : ""
+                }
+        ]
+    }
+]

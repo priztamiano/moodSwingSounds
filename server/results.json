@@ -1,0 +1,152 @@
+[
+    {
+        "mood" : "happy",
+        "description" : "Tu día luce encaminado",
+        "tracks" : [
+            {   
+                "id" : "1",
+                "title" : "C'mere",
+                "artist" : "Interpol",
+                "trackDescription" : "",
+                "link" : "W6k2j4lJ59g"
+            }, 
+            {   
+                "id" : "2",
+                "title" : "Ask",
+                "artist" : "The Smiths",
+                "trackDescription" : "",
+                "link" : "zoo9Vu1a9bU"
+
+            },
+            {   
+                "id" : "3",
+                "title" : "Lake of Fire (Meat Puppets)",
+                "artist" : "Nirvana",
+                "trackDescription" : "",
+                "link" : "drVCYItHV-w"
+
+            },
+            {   
+                "id" : "4",
+                "title" : "Easy",
+                "artist" : "Faith No More",
+                "trackDescription" : "",
+                "link" : "vPzDTfIb0DU"
+
+            }
+
+        ]
+    },
+
+    {
+        "mood" : "sad",
+        "description" : "",
+        "tracks" : [
+            {   
+                "id" : "1",
+                "title" : "Iz us",
+                "artist" : "Aphex Twin",
+                "trackDescription" : "",
+                "link" : "dLHtV_S2HZw"
+
+            },
+            {   
+                "id" : "2",
+                "title" : "Maps",
+                "artist" : "Yeah Yeah Yeahs",
+                "trackDescription" : "",
+                "link" : "oIIxlgcuQRU"
+
+            },
+            {   
+                "id" : "3",
+                "title" : "Ghost of You",
+                "artist" : "My Chemical Romance",
+                "trackDescription" : "",
+                "link" : "uCUpvTMis-Y"
+
+            },
+            {   
+                "id" : "4",
+                "title" : "Comfortably Numb (The Division Bell Tour 1994)",
+                "artist" : "Pink Floyd",
+                "trackDescription" : "",
+                "link" : "vi7cuAjArRs"
+
+            }
+            
+        ]
+    },
+
+    {
+        "mood" : "angry",
+        "description" : "",
+        "tracks" : [
+            {   
+                "id" : "1",
+                "title" : "Duality",
+                "artist" : "Slipknot",
+                "trackDescription" : "",
+                "link" : "6fVE8kSM43I"
+
+            },
+            {   
+                "id" : "2",
+                "title" : "Tourette's (Live at Reading 1992)",
+                "artist" : "Nirvana",
+                "trackDescription" : "",
+                "link" : "wlVdPl-oEmg"
+
+            },
+            {   
+                "id" : "3",
+                "title" : "Crawling",
+                "artist" : "Linkin Park",
+                "trackDescription" : "",
+                "link" : "Gd9OhYroLN0"
+
+            }
+            
+        ]
+    },
+
+    {
+        "mood" : "bored",
+        "description" : "",
+        "tracks" : [
+            {   
+                "id" : "1",
+                "title" : "Leit af Lífi (recycled by Sigur Rós)",
+                "artist" : "Sigur Rós",
+                "trackDescription" : "",
+                "link" : "NQdLPWhFXNA"
+
+            },
+            {   
+                "id" : "2",
+                "title" : "Churchyard (Live on KEXP)",
+                "artist" : "Aurora",
+                "trackDescription" : "",
+                "link" : "nJLuG8c11Gk"
+
+            },
+            {   
+                "id" : "3",
+                "title" : "Vanished",
+                "artist" : "Crystal Castles",
+                "trackDescription" : "",
+                "link" : "56E8yYgLNHE"
+
+            },
+            {   
+                "id" : "4",
+                "title" : "Space Dementia",
+                "artist" : "Muse",
+                "trackDescription" : "",
+                "link" : "QjdGPPSmkJc"
+
+            }
+            
+        ]
+    }
+]

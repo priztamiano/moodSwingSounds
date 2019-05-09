@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Mood Swing Sounds</title>
+</head>
+<body>
+    <!-- CURVE -->
+    <section id="firstSection">
+        <header class="header">
+            <h1>Mood <br> Swing <br> Sounds </h1>
+            <p>Un quiz que recomienda musiquita</p>
+            <nav class="nav">
+                <a href="https://www.linkedin.com/in/priztamiano/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/priztamiano"><i class="fab fa-github-alt"></i></a>
+            </nav>
+        </header>
+                
+        <!-- START -->
+        <div id="start" class="start">
+            <div class="start-content">
+                <p>Tu nombre &#8671</p>
+                <input type="text" id="nameInput" name="nameInput">
+                <a id="buttonStart" class="buttonOne bouncy">Jugar !</a>
+            </div>
+        </div>    
+        <!-- END START -->
+        
+        <svg id="curve" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1401 446.64">
+        <defs>
+            <linearGradient id="gradient">
+              <stop offset="0%" class="main-stop" />
+              <stop offset="100%" class="alt-stop" />
+            </linearGradient>
+        </defs>
+          <path class="cls-1" d="M1399.5,694.5c-69-32.61-167.52-68-289-78-126.88-10.4-226.13,11.32-282,24-62.77,14.24-77.58,23.72-134,40-96.11,27.73-321.16,92.65-532,4C124.08,668.35,64,637.8-.5,578.5v445h1400Z" transform="translate(1 -577.36)"/>
+        </svg>
+    </section>
+    <!-- END CURVE -->
+
+    <section id="secondSection">
+        <!-- QUIZ CONTAINER -->
+        <div id="mainContainer" class="main-container">
+            <div id="nameTag"></div>
+            <div id="question"></div>
+            <div id="answers">
+                <div id="happy"></div>
+                <div id="sad"></div>
+                <div id="angry"></div>
+                <div id="bored"></div>
+            </div>
+        </div>
+        <!-- END QUIZ CONTAINER -->
+
+    </section>
+
+    <script src="js/scriptClient.js"></script>
+</body>
+</html>

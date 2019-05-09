@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Catamaran');
+@import url('https://fonts.googleapis.com/css?family=Dhurjati');
+
+* {
+    font-family: 'Catamaran', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* CURVE */
+#curve {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+    #curve path {
+        fill: url(#gradient);
+    }
+
+    .main-stop {
+        stop-color: rgba(199,174,238,1);
+    }
+    .alt-stop {
+        stop-color: rgba(152,235,195,1);
+    }
+/* CURVE END */
+
+/* FIRST SECTION (HEADER + INPUT) */
+#firstSection {
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+    /* HEADER + NAV */
+    .header {
+        padding: 1%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .header h1::after {
+        content: url(../img/sparkles1.png);
+    }
+    .header h1 {
+        font-family: 'Dhurjati', sans-serif;
+        text-transform: uppercase;
+        color: beige;
+        font-size: 4em;
+        line-height: 0.8em;
+    }
+    .header p {
+        text-transform: uppercase;
+        color: beige;
+        font-size: 1.6em;
+        line-height: 6em;
+    }
+    .nav {
+        padding: 1% 2%;
+        width: 15%;
+        display: flex;
+        justify-content: space-between;
+        line-height: 6em;
+    }
+    .nav i {
+        color: beige;
+        font-size: 1.5em;
+    }
+    .nav i:hover {
+        color: rgba(238,174,202,1);
+    }
+
+    /* INPUT + BUTTON */
+    .start {
+        margin-top: 1.2%;
+        padding: 4%;
+        width: 33vw;
+        height: 50vh;
+        border-radius: 0.12em;
+        background: #FAAB49;
+    }
+    .start  {
+        color: beige;
+        text-transform: uppercase;
+        font-size: 1.2em;
+    }
+    #nameInput {
+        display: inline-block;
+        padding: 0.35em 1.2em;
+        border: 0.1em solid beige;
+        margin: 0 0.3em 0.3em 0;
+        border-radius: 0.12em;
+        font-weight: 300;
+    }
+    .buttonOne {
+        display: inline-block;
+        padding: 0.35em 1.2em;
+        border: 0.1em solid beige;
+        margin: 0 0.3em 0.3em 0;
+        border-radius: 0.12em;
+        text-decoration: none;
+        font-weight: 300;
+        color: beige;
+        text-align: center;
+        text-transform: uppercase;
+        transition: all 0.2s;
+        cursor: pointer;
+    }
+    .buttonOne:hover {
+        color: #000000;
+        background-color: beige;
+    }
+    @media all and (max-width: 30em) {
+        .buttonOne {
+            display: block;
+            margin: 0.4em auto;
+        }
+        #nameInput {
+            display: block;
+            margin: 0.4em auto;
+        }
+    }
+    .bouncy {
+        animation: bouncy 4s infinite linear;
+        position: relative;
+    }
+    @keyframes bouncy {
+        0% { top: 0em }
+        40% { top: 0em }
+        43% { top: -0.9em }
+        46% { top: 0em }
+        48% { top: -0.4em }
+        50% { top: 0em }
+        100% { top: 0em; }
+    }
+/* END FIRST SECTION (HEADER + INPUT) */
+
+/* SECOND SECTION (QUESTIONS) */
+#secondSection {
+    background: linear-gradient(90deg, rgba(199,174,238,1) 0%, rgba(152,235,195,1) 100%);
+}
