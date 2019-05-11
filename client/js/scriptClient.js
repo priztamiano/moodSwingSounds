@@ -27,9 +27,7 @@ function showQuestion() {
         buttonStart.addEventListener("click", () => {
             let question = document.getElementById("question");
             console.log(request.responseText);
-            question.
         })
-
     }
     
 }
@@ -46,6 +44,4 @@ function moodResult() {
     let sad = 0;
     let angry = 0;
     let bored = 0;
-
-
 }
