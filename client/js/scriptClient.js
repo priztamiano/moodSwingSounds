@@ -10,7 +10,7 @@ function loadName() {
     let buttonStart = document.getElementById("buttonStart");
     let pName = document.getElementById("pName");
     buttonStart.addEventListener("click", () => {
-        nameTag.innerText = `Bienvenid@ ${nameInput.value}`;
+        nameTag.innerText = `Bienvenidx ${nameInput.value}`;
         let buttonNext = document.getElementById("buttonNext");
         buttonNext.style.display = "inline-block";
     })
@@ -27,7 +27,9 @@ function showQuestion() {
         buttonStart.addEventListener("click", () => {
             let question = document.getElementById("question");
             console.log(request.responseText);
+            question.
         })
+
     }
     
 }
