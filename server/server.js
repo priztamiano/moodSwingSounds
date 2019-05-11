@@ -3,7 +3,7 @@ const app = express();
 const path = require('path');
 const fs = require('fs');
 const questions = require('./questions.js');
-const results = require('./results.json');
+const results = require('./results.js');
 
 
 app.use(express.static(path.join(__dirname, '../client')))

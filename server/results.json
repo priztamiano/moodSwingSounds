@@ -1,52 +1,59 @@
 [
     {
         "mood" : "happy",
-        "description" : "Tu día luce encaminado",
+        "description" : "Tu día luce encaminado, a mantener el ánimo!",
         "tracks" : [
             {   
                 "id" : "1",
                 "title" : "C'mere",
                 "artist" : "Interpol",
-                "trackDescription" : "",
+                "trackDescription" : "Porque el post-punk también puede ser divertido",
                 "link" : "W6k2j4lJ59g"
             }, 
             {   
                 "id" : "2",
                 "title" : "Ask",
                 "artist" : "The Smiths",
-                "trackDescription" : "",
+                "trackDescription" : "Por qué no un clásico?",
                 "link" : "zoo9Vu1a9bU"
 
             },
             {   
                 "id" : "3",
-                "title" : "Lake of Fire (Meat Puppets)",
+                "title" : "Lake of Fire (Meat Puppets cover)",
                 "artist" : "Nirvana",
-                "trackDescription" : "",
+                "trackDescription" : "Un momento épico para los 90's kids",
                 "link" : "drVCYItHV-w"
 
             },
             {   
                 "id" : "4",
-                "title" : "Easy",
+                "title" : "Easy (Commodores cover)",
                 "artist" : "Faith No More",
-                "trackDescription" : "",
+                "trackDescription" : "Una que nos sabemos todxs",
                 "link" : "vPzDTfIb0DU"
 
-            }
+            },
+            {   
+                "id" : "5",
+                "title" : "ラビリンス (feat. Hikari Mitsushima)",
+                "artist" : "Mondo Grosso",
+                "trackDescription" : "Inevitable bailar, no importa donde estés",
+                "link" : "2quiyHfJQw"
 
+            }
         ]
     },
 
     {
         "mood" : "sad",
-        "description" : "",
+        "description" : "Todos tenemos estos días, nada que la música no pueda cambiar (o acompañar)",
         "tracks" : [
             {   
                 "id" : "1",
                 "title" : "Iz us",
                 "artist" : "Aphex Twin",
-                "trackDescription" : "",
+                "trackDescription" : "Para viajar y mirar por la ventanilla con este track en los auriculares",
                 "link" : "dLHtV_S2HZw"
 
             },
@@ -54,7 +61,7 @@
                 "id" : "2",
                 "title" : "Maps",
                 "artist" : "Yeah Yeah Yeahs",
-                "trackDescription" : "",
+                "trackDescription" : "La voz de Karen O. tiene el poder de curar todos los males",
                 "link" : "oIIxlgcuQRU"
 
             },
@@ -62,7 +69,7 @@
                 "id" : "3",
                 "title" : "Ghost of You",
                 "artist" : "My Chemical Romance",
-                "trackDescription" : "",
+                "trackDescription" : "La música que fue creada para estar triste, lo dice la ciencia",
                 "link" : "uCUpvTMis-Y"
 
             },
@@ -70,23 +77,30 @@
                 "id" : "4",
                 "title" : "Comfortably Numb (The Division Bell Tour 1994)",
                 "artist" : "Pink Floyd",
-                "trackDescription" : "",
+                "trackDescription" : "Lyrics que lo dicen todo",
                 "link" : "vi7cuAjArRs"
 
+            },
+            {   
+                "id" : "5",
+                "title" : "Erase / Rewind",
+                "artist" : "The Cardigans",
+                "trackDescription" : "Una banda clásica siempre puede levantarte el ánimo",
+                "link" : "6WOYnv59Bi8"
+
             }
-            
         ]
     },
 
     {
         "mood" : "angry",
-        "description" : "",
+        "description" : "Todo mal, es comprensible. Quizás necesites de una comida levanta ánimos o alguna de estas canciones",
         "tracks" : [
             {   
                 "id" : "1",
                 "title" : "Duality",
                 "artist" : "Slipknot",
-                "trackDescription" : "",
+                "trackDescription" : "Este track puede ser la solución temporal a tu mal humor (si te gusta el metal)",
                 "link" : "6fVE8kSM43I"
 
             },
@@ -94,7 +108,7 @@
                 "id" : "2",
                 "title" : "Tourette's (Live at Reading 1992)",
                 "artist" : "Nirvana",
-                "trackDescription" : "",
+                "trackDescription" : "Haber estado en ese recital seguramente hubiera calmado tu molestia, por suerte todo está en Internet",
                 "link" : "wlVdPl-oEmg"
 
             },
@@ -102,23 +116,37 @@
                 "id" : "3",
                 "title" : "Crawling",
                 "artist" : "Linkin Park",
-                "trackDescription" : "",
+                "trackDescription" : "La gente que fue adolescente en los 2000 entenderá",
                 "link" : "Gd9OhYroLN0"
 
-            }
-            
+            },
+            {
+                "id" : "4",
+                "title" : "Save Me",
+                "artist" : "Aimee Mann",
+                "trackDescription" : "Aimee Mann puede salvarte de este día",
+                "link" : "QmfQZrI-dYs"
+            },
+            {   
+                "id" : "5",
+                "title" : "Run Baby Run",
+                "artist" : "Garbage",
+                "trackDescription" : "Shirley Manson existe, acaso saberlo no embellece tu día?",
+                "link" : "DEBSr_ZaewY"
+
+            }            
         ]
     },
 
     {
         "mood" : "bored",
-        "description" : "",
+        "description" : "Uno de esos días en que todo da igual? Quizás (al menos) descubras algo interesante acá!",
         "tracks" : [
             {   
                 "id" : "1",
                 "title" : "Leit af Lífi (recycled by Sigur Rós)",
                 "artist" : "Sigur Rós",
-                "trackDescription" : "",
+                "trackDescription" : "Una banda que puede cambiar tu vida (and I mean it)",
                 "link" : "NQdLPWhFXNA"
 
             },
@@ -126,7 +154,7 @@
                 "id" : "2",
                 "title" : "Churchyard (Live on KEXP)",
                 "artist" : "Aurora",
-                "trackDescription" : "",
+                "trackDescription" : "Música nueva para un día rutinario (y como solución a todo)",
                 "link" : "nJLuG8c11Gk"
 
             },
@@ -134,7 +162,7 @@
                 "id" : "3",
                 "title" : "Vanished",
                 "artist" : "Crystal Castles",
-                "trackDescription" : "",
+                "trackDescription" : "Alice Glass puede provocar muchas emociones pero aburrimiento no es una de ellas",
                 "link" : "56E8yYgLNHE"
 
             },
@@ -142,11 +170,18 @@
                 "id" : "4",
                 "title" : "Space Dementia",
                 "artist" : "Muse",
-                "trackDescription" : "",
+                "trackDescription" : "La mejor canción de Muse (sí, así de subjetivo es esto)",
                 "link" : "QjdGPPSmkJc"
 
-            }
-            
+            },
+            {   
+                "id" : "5",
+                "title" : "Drop the Game",
+                "artist" : "Flume & Chet Faker",
+                "trackDescription" : "Un track que te saca el fastidio hasta un lunes a la mañana",
+                "link" : "6vopR3ys8Kw"
+
+            }            
         ]
     }
 ]

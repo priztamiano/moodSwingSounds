@@ -1,38 +1,38 @@
 [
     {
         "id" : 1,
-        "title" : "",
-        "artist" : "",
-        "link"  ""
-    }
+        "title" : "Insane (feat. Moon Holiday)",
+        "artist" : "Flume",
+        "link" :  "2qPl5P0yBiY"
+    },
     {
         "id" : 2,
-        "title" : "",
-        "artist" : "",
-        "link"  ""
-    }
+        "title" : "River",
+        "artist" : "The Belle Game",
+        "link" : "oL3KApukQEs"
+    },
     {
         "id" : 3,
-        "title" : "",
-        "artist" : "",
-        "link"  ""
-    }
+        "title" : "Mr. Wonderful",
+        "artist" : "Saint Pepsi",
+        "link" : "qIj-aZKy508"
+    },
     {
         "id" : 4,
-        "title" : "",
-        "artist" : "",
-        "link"  ""
-    }
+        "title" : "Spending The Night in a Tent ",
+        "artist" : "Refugio Perdido",
+        "link" : "HEFrJzOGq6U"
+    },
     {
         "id" : 5,
-        "title" : "",
-        "artist" : "",
-        "link"  ""
-    }
+        "title" : "Drink I'm Sippin On",
+        "artist" : "Yaeji",
+        "link" : "xoxCItHxLiM"
+    },
     {
         "id" : 6,
         "title" : "",
         "artist" : "",
-        "link"  ""
+        "link" : ""
     }
 ]
