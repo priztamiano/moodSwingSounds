@@ -54,7 +54,6 @@ function showQuestion(questionsList) {
                     break;
 
                     case 4:
-                    console.log('Cuarto elemento');
                     let img = document.createElement('img');
                     img.setAttribute('src', `img/${questionsList[i].answers[j]}.gif`);
                     img.setAttribute('alt', 'GIFS by John Karel');
@@ -69,10 +68,32 @@ function showQuestion(questionsList) {
     })
 }
 
+function addEvent(index) {
+    let happy = [];
+    let sad = [];
+    let angry = [];
+    let bored = [];
+    switch (index) {
+        case 0:
+        happy.push(1);
+        console.log(happy);
+        break;
+        case 1:
+        sad.push(1);
+        break;
+        case 2:
+        angry.push(1);
+        break;
+        case 3:
+        bored.push(1);
+        break;
+    }
+}
 
-function moodResult() {
-    let happy = 0;
-    let sad = 0;
-    let angry = 0;
-    let bored = 0;
+function showIFrame() {
+    var ifrm = document.createElement("iframe");
+    ifrm.setAttribute("src", "http://google.com/");
+    ifrm.style.width = "640px";
+    ifrm.style.height = "480px";
+    document.body.appendChild(ifrm);
 }
