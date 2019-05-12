@@ -47,11 +47,12 @@ function getOneQuestion(documentId, cbDataReady, cbError) {
     // Convierte el objeto _id         
     collection.getOneQuestion({ _id: new mongodb.ObjectID(documentId) }, (err, response) => {
         if (err == undefined) {
-            cbDataReady();
+                cbDataReady();
         } else {
             cbError("No se pudo mostrar la pregunta. " + err);
         }
-        
         client.close();
+    });        
+    }
     })        
 }
