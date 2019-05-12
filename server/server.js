@@ -22,5 +22,7 @@ app.get('/questions', (request, response) => {
 })
 
 app.get('/questions/:id', (request, response) => {
-    questions.getOneQuestion()
+    questions.getOneQuestion(request.params.id, oneQuestion => {
+        response.send(oneQuestion);
+    })
 })

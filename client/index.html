@@ -10,16 +10,16 @@
     <title>Mood Swing Sounds</title>
 </head>
 <body>
-    <section id="firstSection">
+    <section id="firstSection">      
         <header class="header">
-            <h1>Mood <br> Swing <br> Sounds </h1>
+            <a href="#"><h1>Mood <br> Swing <br> Sounds</h1></a>
             <p>Un quiz que recomienda musiquita</p>
             <nav class="nav">
                 <a href="https://www.linkedin.com/in/priztamiano/"><i class="fab fa-linkedin-in"></i></a>
                 <a href="https://github.com/priztamiano"><i class="fab fa-github-alt"></i></a>
             </nav>
         </header>
-                
+
         <div class="flex-container">
         <!-- START -->
         <div id="start" class="start">
@@ -54,19 +54,21 @@
         <!-- QUIZ CONTAINER -->
         <div id="mainContainer" class="main-container">
             <div id="nameTag"></div>
-            <div class="img-question" id="imgQuestion"></div>
             <div class="question" id="question"></div>
-            <div class="answers" id="answers">
-                <div class="happy"></div>
-                <div class="sad"></div>
-                <div class="angry"></div>
-                <div class="bored"></div>
-            </div>
-            <a id="buttonNext" class="buttonOne bouncy">Siguiente !</a>
+            <a id="buttonNext" class="buttonOne bouncy">Ir a la respuesta !</a>
         </div>
         <!-- END QUIZ CONTAINER -->
     </section>
 
+    <section id="thirdSection">
+        <!-- RESULTS CONTAINER -->
+        <div id="song"></div>
+        <div id="artist"></div>
+        <div id="video"></div>
+        <div id="description"></div>
+        <a class="buttonOne bouncy">Otra!</a>
+        <!-- END RESULTS CONTAINER -->
+    </section>
     <script src="js/scriptClient.js"></script>
 </body>
 </html>

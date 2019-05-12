@@ -7,6 +7,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
 }
 
 /* CURVE */
@@ -55,8 +56,8 @@
         font-family: 'Dhurjati', sans-serif;
         text-transform: uppercase;
         color: beige;
-        font-size: 4em;
-        line-height: 0.8em;
+        font-size: 4.2em;
+        line-height: 0.7em;
     }
     .header p {
         text-transform: uppercase;
@@ -110,7 +111,6 @@
         border: 0.1em solid beige;
         margin: 0 0.3em 0.3em 0;
         border-radius: 0.12em;
-        text-decoration: none;
         font-weight: 300;
         color: beige;
         text-align: center;

@@ -3,44 +3,44 @@
         "id" : 1,
         "question" : "Cómo empezó tu mañana?",
         "answers" :
-        {
-            "happy" : "Con café y tostadas!",
-            "sad" : "Levantándome a la hora que debería estar viajando",
-            "angry" : "Como en 'Un día de Furia'",
-            "bored" : "Aburridx de la rutina, esperando que pase algo interesante"
-        }
+        [
+            "Con café y tostadas!",
+            "Levantándome a la hora que debería estar viajando",
+            "Como en 'Un día de Furia'",
+            "Aburridx de la rutina, esperando que pase algo interesante"
+        ]
     },    
     {
         "id" : 2,
         "question" : "Qué te gustaría que suceda a continuación?",
         "answers" :
-        {
-            "happy" : "Que el día siga así de positivo no estaría nada mal",
-            "sad" : "Llegar a casa y dormir hasta la semana que viene es una opción?",
-            "angry" : "Que todos mis problemas se solucionen mágicamente",
-            "bored" : "ALGO, LO QUE SEA!"
-        }
+        [
+            "Que el día siga así de positivo no estaría nada mal",
+            "Llegar a casa y dormir hasta la semana que viene es una opción?",
+            "Que todos mis problemas se solucionen mágicamente",
+            "ALGO, LO QUE SEA!"
+        ]
     },
     {
         "id" : 3,
         "question" : "Cuánto hace que no lloras?",
         "answers" :
-        {
-            "happy" : "No recuerdo la última vez",
-            "sad" : "Estoy conteniendo las lágrimas en este mismo momento",
-            "angry" : "Llorar no solucionaría nada, gritar en la almohada por otro lado...",
-            "bored" : "La última vez que me sucedió algo emotivo fue hace tres meses"
-        }
+        [
+            "No recuerdo la última vez",
+            "Estoy conteniendo las lágrimas en este mismo momento",
+            "Llorar no solucionaría nada, gritar en la almohada por otro lado...",
+            "La última vez que me sucedió algo emotivo fue hace tres meses"
+        ]
     },
     {
         "id" : 4,
         "question" : "Qué gif identifica mejor tu día hasta ahora?",
         "answers" :
-        {
-            "happy" : "hacking.gif",
-            "sad" : "this-is-fine.gif",
-            "angry" : "window.gif",
-            "bored" : "thinking.gif"
-        }
+        [
+            "hacking",
+            "this-is-fine",
+            "window",
+            "thinking"
+        ]
     }
 ]

@@ -1,43 +1,74 @@
 window.onload = function() {
     loadName();
-    showQuestion()
+    requestQuestions(showQuestion);
 }
+// Declaraciones de contantes del DOM
+const nameInput = document.getElementById("nameInput");
+const nameTag = document.getElementById("nameTag");
+const buttonStart = document.getElementById("buttonStart");
+const buttonNext = document.getElementById("buttonNext");
+const divQuestion = document.getElementById("question");
 
 // Función que carga el nombre de user al clickear el primer botón
 function loadName() {
-    let nameInput = document.getElementById("nameInput");
-    let nameTag = document.getElementById("nameTag");
-    let buttonStart = document.getElementById("buttonStart");
-    let pName = document.getElementById("pName");
     buttonStart.addEventListener("click", () => {
         nameTag.innerText = `Bienvenidx ${nameInput.value}`;
-        let buttonNext = document.getElementById("buttonNext");
-        buttonNext.style.display = "inline-block";
     })
 }
 
-
-
-// Función que muestra la primer pregunta
-function showQuestion() {
+// Función que hace el request de las preguntas
+function requestQuestions(cbReqQuestions) {
     let request = new XMLHttpRequest();
-    request.open('GET', '/questions');
-    request.send();
     request.onload = () => {
-        buttonStart.addEventListener("click", () => {
-            let question = document.getElementById("question");
-            console.log(request.responseText);
-        })
+        let questionsParsed = JSON.parse(request.responseText);
+        console.log(questionsParsed);
+        cbReqQuestions(questionsParsed);
     }
-    
+
+    request.open('GET', 'http://localhost:3333/questions');
+    request.send();
 }
 
-// Función que muestra la siguiente pregunta al hacer click en el botón
-function nextQuestion() {
-    buttonNext.addEventListener('click', () => {
 
+// Función que muestra las preguntas con sus posibles respuestas
+function showQuestion(questionsList) {
+    buttonStart.addEventListener('click', () => {
+    if (questionsList) {
+        for (let i = 0; i < questionsList.length; i++) {
+                       
+            let divPerQuestion = document.createElement('div');
+            divPerQuestion.innerText = questionsList[i].question;
+            divQuestion.appendChild(divPerQuestion);
+            buttonNext.style.display = "inline-block";
+            console.log(questionsList[i].question)
+
+            for (let j = 0; j < questionsList[i].answers.length; j++) {
+                switch (questionsList[i].id) {
+                    case 1:
+                    case 2:
+                    case 3:
+                    let buttonPerAnswer = document.createElement('a');
+                    buttonPerAnswer.innerText = questionsList[i].answers[j];
+                    buttonPerAnswer.setAttribute('class', 'buttonOne');
+                    divQuestion.appendChild(buttonPerAnswer);
+                    break;
+
+                    case 4:
+                    console.log('Cuarto elemento');
+                    let img = document.createElement('img');
+                    img.setAttribute('src', `img/${questionsList[i].answers[j]}.gif`);
+                    img.setAttribute('alt', 'GIFS by John Karel');
+                    img.setAttribute('class', 'img-gif');
+                    divQuestion.appendChild(img);
+                    break;
+                }
+            console.log(questionsList[i].answers[j])
+            }
+        }
+    }
     })
 }
+
 
 function moodResult() {
     let happy = 0;
