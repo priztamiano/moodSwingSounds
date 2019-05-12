@@ -43,6 +43,7 @@ function showQuestion(questionsList) {
             console.log(questionsList[i].question)
 
             for (let j = 0; j < questionsList[i].answers.length; j++) {
+
                 switch (questionsList[i].id) {
                     case 1:
                     case 2:
@@ -59,35 +60,14 @@ function showQuestion(questionsList) {
                     img.setAttribute('alt', 'GIFS by John Karel');
                     img.setAttribute('class', 'img-gif');
                     divQuestion.appendChild(img);
+                    img.addEventListener('click', () => countAnswers());
                     break;
                 }
-            console.log(questionsList[i].answers[j])
+            console.log(questionsList[i].answers[j]);
             }
         }
     }
     })
-}
-
-function addEvent(index) {
-    let happy = [];
-    let sad = [];
-    let angry = [];
-    let bored = [];
-    switch (index) {
-        case 0:
-        happy.push(1);
-        console.log(happy);
-        break;
-        case 1:
-        sad.push(1);
-        break;
-        case 2:
-        angry.push(1);
-        break;
-        case 3:
-        bored.push(1);
-        break;
-    }
 }
 
 function showIFrame() {
