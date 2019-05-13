@@ -105,7 +105,7 @@
         font-weight: 300;
         color: black;
     }
-    .buttonOne {
+    .button-one, .selected {
         display: inline-block;
         padding: 0.35em 1.2em;
         border: 0.1em solid beige;
@@ -118,12 +118,12 @@
         transition: all 0.2s;
         cursor: pointer !important;
     }
-    .buttonOne:hover {
+    .button-one:hover {
         color: #000000;
         background-color: beige;
     }
     @media all and (max-width: 30em) {
-        .buttonOne {
+        .button-one {
             display: block;
             margin: 0.4em auto;
         }
@@ -146,7 +146,7 @@
         50% { top: 0em }
         100% { top: 0em; }
     }
-    .buttonBig {
+    .button-big {
         position: relative;
         z-index: 10;
         width: 45%;
@@ -174,6 +174,23 @@
         z-index: 6;
         text-transform: uppercase;
         font-size: 2em;
+    }
+    .button-two {
+        border: 0.4em solid #FAAB49;
+        background-color: #FAAB49;
+    }
+    .button-two:hover, .selected {
+        color: #000000;
+        background-color: #FD5B78;
+        border: 0.4em solid #FD5B78;
+        color: beige;
+    }
+    .img-gif {
+        width: 40vh;
+        cursor: pointer;
+    }
+    .img-gif:hover {
+        opacity: 0.5;
     }
     #buttonNext {
         display: none;

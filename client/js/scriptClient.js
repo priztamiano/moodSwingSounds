@@ -50,8 +50,12 @@ function showQuestion(questionsList) {
                     case 3:
                     let buttonPerAnswer = document.createElement('a');
                     buttonPerAnswer.innerText = questionsList[i].answers[j];
-                    buttonPerAnswer.setAttribute('class', 'buttonOne');
+                    buttonPerAnswer.setAttribute('class', 'button-one button-two');
+                    
                     divQuestion.appendChild(buttonPerAnswer);
+                    buttonPerAnswer.addEventListener('click', () => {
+                        buttonPerAnswer.classList.add('selected');
+                    });
                     break;
 
                     case 4:
@@ -60,7 +64,9 @@ function showQuestion(questionsList) {
                     img.setAttribute('alt', 'GIFS by John Karel');
                     img.setAttribute('class', 'img-gif');
                     divQuestion.appendChild(img);
-                    img.addEventListener('click', () => countAnswers());
+                    img.addEventListener('click', () => {
+                        buttonPerAnswer.setAttribute('class', 'img-selected');
+                    });
                     break;
                 }
             console.log(questionsList[i].answers[j]);
