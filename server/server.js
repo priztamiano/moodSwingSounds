@@ -26,3 +26,15 @@ app.get('/questions/:id', (request, response) => {
         response.send(oneQuestion);
     })
 })
+
+app.get('/results', (req, res) => {
+    results.getResults(arrResults => {
+        res.send(arrResults)
+    })
+})
+
+app.get('/results/:id', (req, res) => {
+    results.getOneResult(req.params.id, oneResult => {
+        res.send(oneResult)
+    })
+})

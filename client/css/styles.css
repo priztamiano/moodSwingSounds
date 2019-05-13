@@ -192,6 +192,9 @@
     .img-gif:hover {
         opacity: 0.5;
     }
+    .img-selected {
+        opacity: 0.5;
+    }
     #buttonNext {
         display: none;
     }

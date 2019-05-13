@@ -49,24 +49,37 @@ function showQuestion(questionsList) {
                     case 2:
                     case 3:
                     let buttonPerAnswer = document.createElement('a');
-                    buttonPerAnswer.innerText = questionsList[i].answers[j];
+                    buttonPerAnswer.setAttribute('id', `button${questionsList[i].answers[j].idAnswer}`);
                     buttonPerAnswer.setAttribute('class', 'button-one button-two');
-                    
+                    buttonPerAnswer.innerText = questionsList[i].answers[j].mood;
                     divQuestion.appendChild(buttonPerAnswer);
+
                     buttonPerAnswer.addEventListener('click', () => {
-                        buttonPerAnswer.classList.add('selected');
-                    });
+                        let btnClassTwo = divQuestion.getElementsByClassName('button-two');
+                        for (let k = 0; k < btnClassTwo.length; k++) {
+                            if (btnClassTwo[k]) {
+                                buttonPerAnswer[k].classList.toggle('selected');
+                            } else {
+                                buttonPerAnswer[k].classList.remove('selected');
+                            }
+                        }
+                    })
+
+                    
                     break;
 
                     case 4:
                     let img = document.createElement('img');
-                    img.setAttribute('src', `img/${questionsList[i].answers[j]}.gif`);
+                    img.setAttribute('src', `img/${questionsList[i].answers[j].mood}.gif`);
                     img.setAttribute('alt', 'GIFS by John Karel');
+                    img.setAttribute('id', `button${questionsList[i].answers[j].idAnswer}`);
                     img.setAttribute('class', 'img-gif');
-                    divQuestion.appendChild(img);
+
                     img.addEventListener('click', () => {
-                        buttonPerAnswer.setAttribute('class', 'img-selected');
+                        img.classList.toggle('img-selected');
                     });
+
+                    divQuestion.appendChild(img);
                     break;
                 }
             console.log(questionsList[i].answers[j]);
