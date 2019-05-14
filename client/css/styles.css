@@ -172,7 +172,7 @@
     #nameTag {
         font-family: 'Dhurjati', sans-serif;
         position: relative;
-        z-index: 6;
+        z-index: 10;
         text-transform: uppercase;
         font-size: 4em;
     }
@@ -221,9 +221,22 @@
 
 /* THIRD SECTION (RESULTS) */
 #thirdSection {
+    
     background: linear-gradient(90deg, rgba(199,174,238,1) 0%, rgba(152,235,195,1) 100%);
     display: none;
 }
+    #selectedResult {
+        z-index: 10;
+        margin-right: 2%;
+        margin-left: 2%;
+        padding: 0.35em 1.2em;
+        border: 0.1em solid beige;
+        border-radius: 0.12em; 
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.5em;
+    }
 /* END THIRD SECTION (RESULTS) */
 
 /* FOOTER */
