@@ -2,13 +2,20 @@ window.onload = function() {
     loadName();
     requestQuestions(showQuestion);
 }
-// Declaraciones de contantes del DOM
+
+// Declaraciones de constantes del DOM
 const nameInput = document.getElementById("nameInput");
 const nameTag = document.getElementById("nameTag");
 const buttonStart = document.getElementById("buttonStart");
-const buttonNext = document.getElementById("buttonNext");
+const secondSection = document.getElementById("secondSection");
 const divQuestion = document.getElementById("question");
+const buttonNext = document.getElementById("buttonNext");
+const thirdSection = document.getElementById("thirdSection");
+const divSong = document.getElementById("song");
+const divArtist = document.getElementById("artist");
 const divVideo = document.getElementById("video");
+const divDescription = document.getElementById("description");
+
 // Función que carga el nombre de user al clickear el primer botón
 function loadName() {
     buttonStart.addEventListener("click", () => {
@@ -43,8 +50,7 @@ function showQuestion(questionsList) {
             divQuestion.appendChild(divPerQuestion);
             buttonNext.style.display = "inline-block";
             buttonNext.addEventListener('click', () => {
-                getResult();
-                //requestResults(showVideo);
+                requestResults(showVideo);
             })
             console.log(questionsList[i].question)
 
@@ -53,6 +59,7 @@ function showQuestion(questionsList) {
                     case 1:
                     case 2:
                     case 3:
+                    case 4:
                     let buttonPerAnswer = document.createElement('a');
                     buttonPerAnswer.setAttribute('class', 'button-one button-two');
                     buttonPerAnswer.innerText = questionsList[i].answers[j].mood;
@@ -73,7 +80,7 @@ function showQuestion(questionsList) {
                     
                     break;
 
-                    case 4:
+                    case 5:
                     let img = document.createElement('img');
                     img.setAttribute('src', `img/${questionsList[i].answers[j].mood}.gif`);
                     img.setAttribute('alt', 'GIFS by John Karel');
@@ -120,33 +127,59 @@ function requestResults(cbReqQuestions) {
 
 // Función que hace el conteo de resultados
 function getResult() {
+
+}
+
+
+// Función que arma el iframe de los videos y los muestra en su sección
+function showVideo(resultsList) {
+    thirdSection.style.display = "block";
+
     let happyCount = 0, sadCount = 0, boredCount = 0, angryCount = 0;
     let selectedOptions = document.getElementsByClassName('selected');
-    if (selectedOptions.length == 4) {
+    if (selectedOptions.length == 5) {
         for (let i = 0; i < selectedOptions.length; i++) {
             if (selectedOptions[i].classList.contains("happy")) happyCount++;
             if (selectedOptions[i].classList.contains("sad")) sadCount++;
             if (selectedOptions[i].classList.contains("angry")) angryCount++;
             if (selectedOptions[i].classList.contains("bored")) boredCount++;
         }
-        document.getElementById("selectedResult").innerText = `happy: ${happyCount} | sad: ${sadCount} | bored: ${boredCount} | angry: ${angryCount}`;
+        document.getElementById("selectedResult").innerText = `happy: ${happyCount} | sad: ${sadCount} | angry: ${angryCount} | bored: ${boredCount}`;
     } else {
         alert('Completa todo el cuestionario para obtener tu resultado :)') // TO DO: que aparezca solo 1 vez y no por cada loop
     }
-}
 
-
-// Función que arma el iframe de los videos y los muestra en su sección
-function showVideo(resultsList) {
-    var ifrm = document.createElement("iframe");
-    if (resultsList) {
-        for (let i = 0; i < resultsList.length; i++) {
-            for (let j = 0; j < resultsList[i].tracks; j++) {
-                ifrm.setAttribute("src", `https://youtu.be/${resultsList[i].tracks[j].link}`);
-                ifrm.style.width = "640px";
-                ifrm.style.height = "480px";
-                divVideo.appendChild(ifrm);
+        if (resultsList) {
+            divQuestion.style.display = "none";
+            buttonNext.style.display = "none";
+            for (let j = 0; j < resultsList.length; j++) {
+                if ((happyCount > sadCount) && (happyCount > angryCount) && (happyCount > boredCount)) {
+                    //console.log('happy');
+                    break;
+                    //for (let k = 0; k < resultsList[0].tracks.length; k++) {
+                        // console.log(resultsList[0].tracks[k]);
+                        //break;
+                    //}
+                }
+                let randomTrack = resultsList[0].tracks[`${Math.floor(Math.random() * 5)}`];
+                divSong.innerText = randomTrack.title;
+                console.log(randomTrack)
             }
+        
+        
+                // 
+                // divArtist.innerText = resultsList[j].tracks[k].artist;
+                // ifrm.setAttribute("src", `https://youtu.be/${resultsList[j].tracks[k].link}`);
+                // ifrm.style.width = "640px";
+                // ifrm.style.height = "480px";
+                // divVideo.appendChild(ifrm);
+            
+        } else if ((sadCount > happyCount) && (sadCount > angryCount) && (sadCount > boredCount)) {
+            console.log('sad');
+        } else if ((angryCount > happyCount) && (angryCount > sadCount) && (angryCount > boredCount)) {
+            console.log('angry');
+        } else if ((boredCount > happyCount) && (boredCount > sadCount) && (boredCount > angryCount)) {
+            console.log('bored')
         }
-    }
+
 }

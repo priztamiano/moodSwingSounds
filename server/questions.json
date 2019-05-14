@@ -70,6 +70,29 @@
     },
     {
         "id" : 4,
+        "question" : "Qué música escucharías ahora?",
+        "answers" :
+        [
+            {
+                "idAnswer" : "happy",
+                "mood" : "Algún clásico"
+            },
+            {
+                "idAnswer" : "sad",
+                "mood" : "El día está para Radiohead"
+            },
+            {
+                "idAnswer" : "angry",
+                "mood" : "Cualquier banda que me ayude a sobrevivir este día"
+            },
+            {
+                "idAnswer" : "bored",
+                "mood" : "Algo que nunca haya escuchado antes"
+            }
+        ]
+    },
+    {
+        "id" : 5,
         "question" : "Qué gif identifica mejor tu día hasta ahora?",
         "answers" :
         [

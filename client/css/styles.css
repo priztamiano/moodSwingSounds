@@ -201,3 +201,18 @@
     #buttonNext {
         display: none;
     }
+/* END SECOND SECTION (QUESTIONS) */
+
+/* THIRD SECTION (RESULTS) */
+#thirdSection {
+    background: linear-gradient(90deg, rgba(199,174,238,1) 0%, rgba(152,235,195,1) 100%);
+    display: none;
+}
+/* END THIRD SECTION (RESULTS) */
+
+/* FOOTER */
+footer {
+    background: linear-gradient(90deg, rgba(199,174,238,1) 0%, rgba(152,235,195,1) 100%);
+    height: 20vh;
+}
+/* END FOOTER */
