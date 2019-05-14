@@ -15,11 +15,46 @@ const divSong = document.getElementById("song");
 const divArtist = document.getElementById("artist");
 const divVideo = document.getElementById("video");
 const divDescription = document.getElementById("description");
+const btnModal = document.getElementById("buttonRandom");
+const btnClose = document.getElementById("btnCloseModal");
+const modal = document.getElementById("videoOfTheDay")
 
 // Función que carga el nombre de user al clickear el primer botón
 function loadName() {
     buttonStart.addEventListener("click", () => {
         nameTag.innerText = `Bienvenidx ${nameInput.value}`;
+    })
+}
+
+// Función que hace el request de los videos random y abre el modal de video of the day
+function openModal(randomList) {
+    let request = new XMLHttpRequest();
+    request.onload = () => {
+        let randomList = JSON.parse(request.responseText);
+        console.log(randomList);
+    }
+    request.open('GET', 'http://localhost:3333/random');
+    request.send();
+
+    btnModal.addEventListener('click', () => {
+        let iframe = document.createElement('iframe');
+        iframe.style.width = "640px";
+        iframe.style.height = "480px";
+        iframe.classList.add('modal-content');
+        if (randomList) {
+            for (let i = 0; i < random.randomList.length; i++) {
+                let randomVid = randomList[`${Math.floor(Math.random() * 5)}`].link;
+                iframe.setAttribute("src", `https://youtu.be/${randomVid}`);
+                console.log(randomVid);
+                break;
+            }
+            modal.appendChild(iframe);
+            modal.style.display = "block";
+            
+        }
+    })
+    btnClose.addEventListener('click', () => {
+        modal.style.display = "none"
     })
 }
 
@@ -35,7 +70,6 @@ function requestQuestions(cbReqQuestions) {
     request.open('GET', 'http://localhost:3333/questions');
     request.send();
 }
-
 
 // Función que muestra las preguntas con sus posibles respuestas
 function showQuestion(questionsList) {
@@ -188,13 +222,8 @@ function showVideo(resultsList) {
             }
         
         
-                // 
-                // divArtist.innerText = resultsList[j].tracks[k].artist;
-                // ifrm.setAttribute("src", `https://youtu.be/${resultsList[j].tracks[k].link}`);
-                // ifrm.style.width = "640px";
-                // ifrm.style.height = "480px";
-                // divVideo.appendChild(ifrm);
-            
-
+                 
+                //divArtist.innerText = resultsList[j].tracks[k].artist;
+                //iframe.setAttribute("src", `https://youtu.be/${resultsList[j].tracks[k].link}`);
         }
 }

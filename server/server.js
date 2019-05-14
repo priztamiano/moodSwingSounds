@@ -4,6 +4,7 @@ const path = require('path');
 const fs = require('fs');
 const questions = require('./questions.js');
 const results = require('./results.js');
+const random = require('./videoOfDay.js');
 
 app.use(express.static(path.join(__dirname, '../client')))
 
@@ -36,5 +37,17 @@ app.get('/results', (req, res) => {
 app.get('/results/:mood', (req, res) => {
     results.getOneMood(req.params.mood, oneMood => {
         res.send(oneMood)
+    })
+})
+
+app.get('/random', (req, res) => {
+    random.getRandom(arrRandom => {
+        res.send(arrRandom);
+    })
+})
+
+app.get('/random/:id', (req, res) => {
+    random.getOneRandom(req.params.id, oneRandom => {
+        res.send(oneRandom);
     })
 })
