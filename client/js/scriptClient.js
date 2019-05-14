@@ -45,7 +45,10 @@ function showQuestion(questionsList) {
                        
             let divPerQuestion = document.createElement('div');
             // divPerQuestion.setAttribute('id', `div${questionsList[i].id}`);
-            divPerQuestion.innerText = questionsList[i].question;
+            let pQuestion = document.createElement('p');
+            pQuestion.classList.add('p-question')
+            pQuestion.innerHTML = questionsList[i].question;
+            divPerQuestion.appendChild(pQuestion);
             divPerQuestion.classList.add('answers-group');
             divQuestion.appendChild(divPerQuestion);
             buttonNext.style.display = "inline-block";
@@ -105,7 +108,7 @@ function showQuestion(questionsList) {
 
                     break;
                 }
-            console.log(questionsList[i].answers[j]);
+            //console.log(questionsList[i].answers[j]);
             }
         }
     }
@@ -124,12 +127,6 @@ function requestResults(cbReqQuestions) {
     request.open('GET', 'http://localhost:3333/results');
     request.send();
 }
-
-// Función que hace el conteo de resultados
-function getResult() {
-
-}
-
 
 // Función que arma el iframe de los videos y los muestra en su sección
 function showVideo(resultsList) {
@@ -154,16 +151,40 @@ function showVideo(resultsList) {
             buttonNext.style.display = "none";
             for (let j = 0; j < resultsList.length; j++) {
                 if ((happyCount > sadCount) && (happyCount > angryCount) && (happyCount > boredCount)) {
-                    //console.log('happy');
-                    break;
-                    //for (let k = 0; k < resultsList[0].tracks.length; k++) {
+                    console.log('happy');
+                    
+                    for (let k = 0; k < resultsList[0].tracks.length; k++) {
                         // console.log(resultsList[0].tracks[k]);
-                        //break;
-                    //}
+                        let randomTrack = resultsList[0].tracks[`${Math.floor(Math.random() * 5)}`];
+                        divSong.innerText = randomTrack.title;
+                        console.log(randomTrack.title)        
+                    }
+                } else if ((sadCount > happyCount) && (sadCount > angryCount) && (sadCount > boredCount)) {
+                    console.log('sad');
+                    for (let k = 0; k < resultsList[1].tracks.length; k++) {
+                        // console.log(resultsList[1].tracks[k]);
+                        let randomTrack = resultsList[1].tracks[`${Math.floor(Math.random() * 5)}`];
+                        divSong.innerText = randomTrack.title;
+                        console.log(randomTrack.title)        
+                    }
+                } else if ((angryCount > happyCount) && (angryCount > sadCount) && (angryCount > boredCount)) {
+                    console.log('angry');
+                    for (let k = 0; k < resultsList[2].tracks.length; k++) {
+                        // console.log(resultsList[2].tracks[k]);
+                        let randomTrack = resultsList[2].tracks[`${Math.floor(Math.random() * 5)}`];
+                        divSong.innerText = randomTrack.title;
+                        console.log(randomTrack.title)        
+                    }
+                } else if ((boredCount > happyCount) && (boredCount > sadCount) && (boredCount > angryCount)) {
+                    console.log('bored')
+                    for (let k = 0; k < resultsList[3].tracks.length; k++) {
+                        // console.log(resultsList[3].tracks[k]);
+                        let randomTrack = resultsList[3].tracks[`${Math.floor(Math.random() * 5)}`];
+                        divSong.innerText = randomTrack.title;
+                        console.log(randomTrack.title)        
+                    }
                 }
-                let randomTrack = resultsList[0].tracks[`${Math.floor(Math.random() * 5)}`];
-                divSong.innerText = randomTrack.title;
-                console.log(randomTrack)
+        
             }
         
         
@@ -174,12 +195,6 @@ function showVideo(resultsList) {
                 // ifrm.style.height = "480px";
                 // divVideo.appendChild(ifrm);
             
-        } else if ((sadCount > happyCount) && (sadCount > angryCount) && (sadCount > boredCount)) {
-            console.log('sad');
-        } else if ((angryCount > happyCount) && (angryCount > sadCount) && (angryCount > boredCount)) {
-            console.log('angry');
-        } else if ((boredCount > happyCount) && (boredCount > sadCount) && (boredCount > angryCount)) {
-            console.log('bored')
-        }
 
+        }
 }
