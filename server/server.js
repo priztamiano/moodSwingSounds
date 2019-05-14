@@ -33,8 +33,8 @@ app.get('/results', (req, res) => {
     })
 })
 
-app.get('/results/:id', (req, res) => {
-    results.getOneResult(req.params.id, oneResult => {
-        res.send(oneResult)
+app.get('/results/:mood', (req, res) => {
+    results.getOneMood(req.params.mood, oneMood => {
+        res.send(oneMood)
     })
 })

@@ -1,5 +1,6 @@
 [
-    {
+    {   
+        "resultId" : 1,
         "mood" : "happy",
         "description" : "Tu día luce encaminado, a mantener el ánimo!",
         "tracks" : [
@@ -46,6 +47,7 @@
     },
 
     {
+        "resultId" : 2,
         "mood" : "sad",
         "description" : "Todos tenemos estos días, nada que la música no pueda cambiar (o acompañar)",
         "tracks" : [
@@ -93,6 +95,7 @@
     },
 
     {
+        "resultId" : 3,
         "mood" : "angry",
         "description" : "Todo mal, es comprensible. Quizás necesites de una comida levanta ánimos o alguna de estas canciones",
         "tracks" : [
@@ -139,6 +142,7 @@
     },
 
     {
+        "resultId" : 4,
         "mood" : "bored",
         "description" : "Uno de esos días en que todo da igual? Quizás (al menos) descubras algo interesante acá!",
         "tracks" : [

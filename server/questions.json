@@ -5,19 +5,19 @@
         "answers" :
         [
             {
-                "idAnswer" : 1,
+                "idAnswer" : "happy",
                 "mood" : "Con café y tostadas!"
             },
             {
-                "idAnswer" : 2,
+                "idAnswer" : "sad",
                 "mood" : "Levantándome a la hora que debería estar viajando"
             },
             {
-                "idAnswer" : 3,
+                "idAnswer" : "angry",
                 "mood" : "Como en 'Un día de Furia'"
             },
             {
-                "idAnswer" : 4,
+                "idAnswer" : "bored",
                 "mood" : "Aburridx de la rutina, esperando que pase algo interesante"
             }
         ]
@@ -28,19 +28,19 @@
         "answers" :
         [
             {
-                "idAnswer" : 5,
+                "idAnswer" : "happy",
                 "mood" : "Que el día siga así de positivo no estaría nada mal"
             },
             {
-                "idAnswer" : 6,
+                "idAnswer" : "sad",
                 "mood" : "Llegar a casa y dormir hasta la semana que viene es una opción?"
             },
             {
-                "idAnswer" : 7,
+                "idAnswer" : "angry",
                 "mood" : "Que todos mis problemas se solucionen mágicamente"
             },
             {
-                "idAnswer" : 8,
+                "idAnswer" : "bored",
                 "mood" : "ALGO, LO QUE SEA!"
             }
         ]
@@ -51,19 +51,19 @@
         "answers" :
         [
             {
-                "idAnswer" : 9,
-                "mood" : "No recuerdo la última vez"
+                "idAnswer" : "happy",
+                "mood" : "No hubo ocasión para llorar en estos meses"
             },
             {
-                "idAnswer" : 10,
+                "idAnswer" : "sad",
                 "mood" : "Estoy conteniendo las lágrimas en este mismo momento"
             },
             {
-                "idAnswer" : 11,
+                "idAnswer" : "angry",
                 "mood" : "Llorar no solucionaría nada, gritar en la almohada por otro lado..."
             },
             {
-                "idAnswer" : 12,
+                "idAnswer" : "bored",
                 "mood" : "La última vez que me sucedió algo emotivo fue hace tres meses"
             }
         ]
@@ -74,20 +74,20 @@
         "answers" :
         [
             {
-                "idAnswer" : 13,
+                "idAnswer" : "happy",
                 "mood" : "hacking"
             },
             {
-                "idAnswer" : 14,
+                "idAnswer" : "sad",
                 "mood" : "this-is-fine"
             },
             {
-                "idAnswer" : 15,
+                "idAnswer" : "angry",
                 "mood" : "window"
             },
             {
-                "idAnswer" : 16,
-                "mood" : "thinking"
+                "idAnswer" : "bored",
+                "mood" : "shaking"
             }
         ]
     }

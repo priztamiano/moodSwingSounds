@@ -1,6 +1,6 @@
 module.exports = {
     getResults : getResults,
-    getOneResult : getOneResult
+    getOneMood : getOneMood
 }
 
 const path = require('path');
@@ -16,13 +16,13 @@ function getResults(success) {
     })
 }
 
-// Función que hace el request de cada una de las preguntas según ID
-function getOneResult(id, success) {
+// Función que hace el request de cada una de las preguntas según mood
+function getOneMood(mood, success) {
     fs.readFile(path.join(__dirname, 'results.json'), (err, data) => {
         if (err == undefined) {
             allResults = JSON.parse(data);
-            let oneResult = allResults.find(item => item.id == id);
-            success(oneResult);
+            let oneMood = allResults.find(item => item.resultId == mood);
+            success(oneMood);
         }
     })   
 }
