@@ -63,7 +63,6 @@ function requestQuestions(cbReqQuestions) {
     let request = new XMLHttpRequest();
     request.onload = () => {
         let questionsParsed = JSON.parse(request.responseText);
-        console.log(questionsParsed);
         cbReqQuestions(questionsParsed);
     }
 
