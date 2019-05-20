@@ -1,7 +1,7 @@
-Mood Swing Sounds
+# Mood Swing Sounds :sparkles:
 
-Para ver este proyecto:
-npm install
-npm start
+To use this project:
+`npm install`
+`npm start`
 
-GIFS by John Karel => https://www.instagram.com/jjjjjohn
+GIFS by => [John Karel](https://www.instagram.com/jjjjjohn)
