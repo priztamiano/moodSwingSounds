@@ -182,10 +182,9 @@
             font-weight: bold;
         }
         .modal-content {
-            background-image: url(http://api.thumbr.it/whitenoise-361x370.png?);
+            background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
             margin: 15% auto;
             padding: 20px;
-            border: 1px solid rgb(245, 245, 220);
             width: 50%;
             height: 300px;
             text-align: center;

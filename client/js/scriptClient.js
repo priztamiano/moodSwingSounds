@@ -31,31 +31,34 @@ function openModal(randomList) {
     let request = new XMLHttpRequest();
     request.onload = () => {
         let randomList = JSON.parse(request.responseText);
-        console.log(randomList);
+        //console.log(randomList);
+        btnModal.addEventListener('click', () => {
+            let iframe = document.createElement('iframe');
+            iframe.style.width = "640px";
+            iframe.style.height = "480px";
+            iframe.classList.add('modal-content');
+            if (randomList) {
+                for (let i = 0; i < randomList.length; i++) {
+                    let randomVid = randomList[`${Math.floor(Math.random() * 5)}`].link;
+                    //let randomVid = `randomList[${Math.floor(Math.random() * 5)}].link`;
+                    iframe.setAttribute("src", `https://youtube.com/embed/${randomVid}`);
+                    console.log(randomVid);
+                    break;
+                }
+                modal.appendChild(iframe);
+                modal.style.display = "block";
+                
+            }
+        })
+        btnClose.addEventListener('click', () => {
+            modal.style.display = "none"
+        })
+    
+
     }
     request.open('GET', 'http://localhost:3333/random');
     request.send();
 
-    btnModal.addEventListener('click', () => {
-        let iframe = document.createElement('iframe');
-        iframe.style.width = "640px";
-        iframe.style.height = "480px";
-        iframe.classList.add('modal-content');
-        if (randomList) {
-            for (let i = 0; i < random.randomList.length; i++) {
-                let randomVid = randomList[`${Math.floor(Math.random() * 5)}`].link;
-                iframe.setAttribute("src", `https://youtu.be/${randomVid}`);
-                console.log(randomVid);
-                break;
-            }
-            modal.appendChild(iframe);
-            modal.style.display = "block";
-            
-        }
-    })
-    btnClose.addEventListener('click', () => {
-        modal.style.display = "none"
-    })
 }
 
 // Función que hace el request de las preguntas
