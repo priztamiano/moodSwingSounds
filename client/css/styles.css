@@ -166,7 +166,7 @@
 
     .video-of-the-day {
         display: none;
-        position: fixed;
+        position: absolute;
         z-index: 15;
         left: 0;
         top: 0;
@@ -183,11 +183,13 @@
         }
         .modal-content {
             background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-            margin: 15% auto;
+            margin: auto;
             padding: 20px;
-            width: 50%;
-            height: 300px;
+            border: 1px solid beige;
+            width: auto;
+            height: auto;
             text-align: center;
+            display: flex;
         }
 
 /* END FIRST SECTION (HEADER + INPUT) */
