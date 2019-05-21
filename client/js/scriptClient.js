@@ -1,5 +1,6 @@
 window.onload = function() {
     loadName();
+    requestRandom(openModal);
     requestQuestions(showQuestion);
 }
 
@@ -26,49 +27,50 @@ function loadName() {
     })
 }
 
-// Función que hace el request de los videos random y abre el modal de video of the day
-function openModal(randomList) {
+// Función que hace el request de los videos random a través de AJAX
+function requestRandom(cbRandomVid) {
     let request = new XMLHttpRequest();
     request.onload = () => {
         let randomList = JSON.parse(request.responseText);
-        //console.log(randomList);
-        btnModal.addEventListener('click', () => {
-            let iframe = document.createElement('iframe');
-            iframe.style.width = "640px";
-            iframe.style.height = "480px";
-            iframe.classList.add('modal-content');
-            if (randomList) {
-                for (let i = 0; i < randomList.length; i++) {
-                    let randomVid = randomList[`${Math.floor(Math.random() * 5)}`].link;
-                    //let randomVid = `randomList[${Math.floor(Math.random() * 5)}].link`;
-                    iframe.setAttribute("src", `https://youtube.com/embed/${randomVid}`);
-                    console.log(randomVid);
-                    break;
-                }
-                modal.appendChild(iframe);
-                modal.style.display = "block";
-                
-            }
-        })
-        btnClose.addEventListener('click', () => {
-            modal.style.display = "none"
-        })
-    
-
+        cbRandomVid(randomList)
     }
     request.open('GET', 'http://localhost:3333/random');
     request.send();
-
 }
 
-// Función que hace el request de las preguntas
+// Función que abre el modal de Video of the Day y arma el iframe al hacer click en el botón
+function openModal(randomList) {
+    let iframe = document.createElement('iframe');
+    iframe.style.width = "640px";
+    iframe.style.height = "480px";
+    iframe.classList.add('modal-content');
+    btnModal.addEventListener('click', () => {
+        // Selecciona el video de forma aleatoria y lo muestra
+        if (randomList) {
+            for (let i = 0; i < randomList.length; i++) {
+                let randomVid = randomList[`${Math.floor(Math.random() * 5)}`].link;
+                iframe.setAttribute("src", `https://youtube.com/embed/${randomVid}`);
+                console.log(randomVid);
+                modal.appendChild(iframe);
+                modal.style.display = "block";    
+                break;
+            }
+        }
+    })
+    btnClose.addEventListener('click', () => {
+        // Cierra el modal y le quita el source al iframe para que pare la reproducción
+        iframe.setAttribute("src", "")
+        modal.style.display = "none";
+    })
+}
+
+// Función que hace el request de las preguntas a través de AJAX
 function requestQuestions(cbReqQuestions) {
     let request = new XMLHttpRequest();
     request.onload = () => {
         let questionsParsed = JSON.parse(request.responseText);
         cbReqQuestions(questionsParsed);
     }
-
     request.open('GET', 'http://localhost:3333/questions');
     request.send();
 }
@@ -77,10 +79,9 @@ function requestQuestions(cbReqQuestions) {
 function showQuestion(questionsList) {
     buttonStart.addEventListener('click', () => {
     if (questionsList) {
+       // Itera la lista de preguntas 
         for (let i = 0; i < questionsList.length; i++) {
-                       
             let divPerQuestion = document.createElement('div');
-            // divPerQuestion.setAttribute('id', `div${questionsList[i].id}`);
             let pQuestion = document.createElement('p');
             pQuestion.classList.add('p-question')
             pQuestion.innerHTML = questionsList[i].question;
@@ -92,7 +93,7 @@ function showQuestion(questionsList) {
                 requestResults(showVideo);
             })
             console.log(questionsList[i].question)
-
+            // Itera la lista de respuestas posibles 
             for (let j = 0; j < questionsList[i].answers.length; j++) {
                 switch (questionsList[i].id) {
                     case 1:
@@ -128,7 +129,6 @@ function showQuestion(questionsList) {
                     img.classList.add('option');
                     img.classList.add(`group-${questionsList[i].id}`);
                     img.classList.add(`${questionsList[i].answers[j].idAnswer}`);
-                    // img.setAttribute('id', `button${questionsList[i].answers[j].idAnswer}`);
                     img.onclick = () => {
                         let groupOptionElements = img.parentElement.children;
                         for (let i = 0; i < groupOptionElements.length; i++) {
