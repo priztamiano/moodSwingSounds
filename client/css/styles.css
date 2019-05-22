@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Catamaran');
 @import url('https://fonts.googleapis.com/css?family=Dhurjati');
+@import url('https://fonts.googleapis.com/css?family=Grand+Hotel&display=swap');
 
 * {
     font-family: 'Catamaran', sans-serif;
@@ -122,17 +123,6 @@
         color: #000000;
         background-color: beige;
     }
-    @media all and (max-width: 30em) {
-        .button-one {
-            display: block;
-            margin: 0.4em auto;
-        }
-        #nameInput {
-            display: block;
-            margin: 0.4em auto;
-            cursor: text !important;
-        }
-    }
     .bouncy {
         animation: bouncy 4s infinite linear;
         position: relative;
@@ -166,14 +156,14 @@
 
     .video-of-the-day {
         display: none;
-        position: absolute;
+        position: fixed;
         z-index: 15;
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
         overflow: auto;     
-        background-color: rgba(245, 245, 220, 0.4); 
+        background-color: rgba(245, 245, 220, 0.4);
         }
         .close-modal {
             color: black;
@@ -181,10 +171,12 @@
             font-size: 28px;
             font-weight: bold;
             cursor: pointer;
+            margin: 10px;
         }
         .modal-content {
             background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
             margin: auto;
+            margin-top: 5%; 
             padding: 20px;
             border: 1px solid beige;
             width: auto;
@@ -203,20 +195,18 @@
         text-align: center;
     }
     #nameTag {
-        font-family: 'Dhurjati', sans-serif;
-        position: relative;
+        font-family: 'Grand Hotel', cursive;
         z-index: 10;
-        text-transform: uppercase;
+        text-transform: capitalize;
         font-size: 4em;
     }
     .p-question {
-        width: 90%;
+        width: 99%;
         padding: 0.35em 1.2em;
         border: 0.1em solid beige;
-        margin: 0 0.3em 0.3em 0;
+        margin: 0 0.5em 0.5em 0;
         border-radius: 0.12em;
         display: block;
-        margin: 1%;
         text-align: center;
         text-transform: uppercase;
         font-size: 1.5em;
@@ -260,8 +250,7 @@
 }
     #selectedResult {
         z-index: 10;
-        margin-right: 2%;
-        margin-left: 2%;
+        margin: 0 2% 0 2%;
         padding: 0.35em 1.2em;
         border: 0.1em solid beige;
         border-radius: 0.12em; 
@@ -278,3 +267,16 @@ footer {
     height: 20vh;
 }
 /* END FOOTER */
+
+/* MEDIA QUERIES */
+@media all and (max-width: 30em) {
+    .button-one {
+        display: block;
+        margin: 0.4em auto;
+    }
+    #nameInput {
+        display: block;
+        margin: 0.4em auto;
+        cursor: text !important;
+    }
+}
