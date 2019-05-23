@@ -10,6 +10,9 @@
     padding: 0;
     text-decoration: none;
 }
+iframe {
+    border: none;
+}
 
 /* CURVE */
 #curve {
@@ -146,14 +149,7 @@
         font-size: 1.6em;
         line-height: 30vh;
     }
-
-    @media screen and (max-width: 768px) {
-        .button-big {
-            font-size: 1.4em;
-            overflow: auto;
-        }
-    }
-
+    /* MODAL */
     .video-of-the-day {
         display: none;
         position: fixed;
@@ -184,6 +180,7 @@
             text-align: center;
             display: flex;
         }
+        /* END MODAL */
 
 /* END FIRST SECTION (HEADER + INPUT) */
 
@@ -247,6 +244,7 @@
     
     background: linear-gradient(90deg, rgba(199,174,238,1) 0%, rgba(152,235,195,1) 100%);
     display: none;
+    text-align: center;
 }
     #selectedResult {
         z-index: 10;
@@ -258,6 +256,22 @@
         text-align: center;
         text-transform: uppercase;
         font-size: 1.5em;
+    }
+    #song {
+        display: block;
+        font-family: 'Dhurjati', sans-serif;
+    }
+    #artist {
+        display: block;
+        font-family: 'Grand Hotel', cursive;
+    }
+    #video {
+        display: block;
+
+    }
+    #description {
+        display: block;
+        font-family: 'Catamaran', sans-serif;
     }
 /* END THIRD SECTION (RESULTS) */
 
@@ -279,4 +293,14 @@ footer {
         margin: 0.4em auto;
         cursor: text !important;
     }
+    .button-big {
+        font-size: 1.4em;
+        display: block;
+    }
 }
+
+/*
+@media screen and (max-width: 768px) {
+    
+}
+*/

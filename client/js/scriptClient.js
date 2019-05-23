@@ -41,8 +41,8 @@ function requestRandom(cbRandomVid) {
 // Función que abre el modal de Video of the Day y arma el iframe al hacer click en el botón
 function openModal(randomList) {
     let iframe = document.createElement('iframe');
-    iframe.style.width = "640px";
-    iframe.style.height = "480px";
+    iframe.style.width = "853px";
+    iframe.style.height = "505px";
     iframe.classList.add('modal-content');
     btnModal.addEventListener('click', () => {
         // Selecciona el video de forma aleatoria y lo muestra
@@ -188,12 +188,19 @@ function showVideo(resultsList) {
         if (resultsList && selectedOptions.length == 5) {
             document.getElementById("selectedResult").style.display = "block";
             secondSection.style.display = "none";
+            let ifrRes = document.createElement('iframe');
+            ifrRes.style.width = "853px";
+            ifrRes.style.height = "505px";
             // Si HAPPY es mayor...
             if ((happyCount > sadCount) && (happyCount > angryCount) && (happyCount > boredCount)) {
                 console.log('happy');
                 for (let j = 0; j < resultsList[0].tracks.length; j++) {
                     let randomTrack = resultsList[0].tracks[`${Math.floor(Math.random() * 5)}`];
-                    divSong.innerText = randomTrack.title;
+                    divSong.appendChild(document.createTextNode(randomTrack.title));
+                    divArtist.appendChild(document.createTextNode(randomTrack.artist));
+                    ifrRes.setAttribute('src', `https://youtube.com/embed/${randomTrack.link}`);
+                    divVideo.appendChild(ifrRes);
+                    divDescription.appendChild(document.createTextNode(randomTrack.trackDescription));
                     console.log(randomTrack.title);
                     break;        
                 }
@@ -202,8 +209,12 @@ function showVideo(resultsList) {
                 console.log('sad');
                 for (let k = 0; k < resultsList[1].tracks.length; k++) {
                     let randomTrack = resultsList[1].tracks[`${Math.floor(Math.random() * 5)}`];
-                    divSong.innerText = randomTrack.title;
-                    console.log(randomTrack.title)  ;
+                    divSong.appendChild(document.createTextNode(randomTrack.title));
+                    divArtist.appendChild(document.createTextNode(randomTrack.artist));
+                    ifrRes.setAttribute('src', `https://youtube.com/embed/${randomTrack.link}`);
+                    divVideo.appendChild(ifrRes);
+                    divDescription.appendChild(document.createTextNode(randomTrack.trackDescription));
+                    console.log(randomTrack.title) ;
                     break;      
                 }
             // Si ANGRY es mayor...
@@ -211,7 +222,11 @@ function showVideo(resultsList) {
                 console.log('angry');
                 for (let k = 0; k < resultsList[2].tracks.length; k++) {
                     let randomTrack = resultsList[2].tracks[`${Math.floor(Math.random() * 5)}`];
-                    divSong.innerText = randomTrack.title;
+                    divSong.appendChild(document.createTextNode(randomTrack.title));
+                    divArtist.appendChild(document.createTextNode(randomTrack.artist));
+                    ifrRes.setAttribute('src', `https://youtube.com/embed/${randomTrack.link}`);
+                    divVideo.appendChild(ifrRes);
+                    divDescription.appendChild(document.createTextNode(randomTrack.trackDescription));
                     console.log(randomTrack.title);
                     break;        
                 }
@@ -220,8 +235,11 @@ function showVideo(resultsList) {
                 console.log('bored')
                 for (let k = 0; k < resultsList[3].tracks.length; k++) {
                     let randomTrack = resultsList[3].tracks[`${Math.floor(Math.random() * 5)}`];
-                    divSong.innerText = randomTrack.title;
-                    console.log(randomTrack.title)   ;
+                    divSong.appendChild(document.createTextNode(randomTrack.title));
+                    divArtist.appendChild(document.createTextNode(randomTrack.artist));
+                    ifrRes.setAttribute('src', `https://youtube.com/embed/${randomTrack.link}`);
+                    divVideo.appendChild(ifrRes);
+                    divDescription.appendChild(document.createTextNode(randomTrack.trackDescription));     console.log(randomTrack.title)   ;
                     break;     
                 }
             }
