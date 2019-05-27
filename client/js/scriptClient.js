@@ -1,7 +1,6 @@
 window.onload = function() {
     loadName();
     requestRandom(openModal);
-    requestQuestions(showQuestion);
 }
 
 // Declaraciones de constantes del DOM
@@ -18,13 +17,21 @@ const divVideo = document.getElementById("video");
 const divDescription = document.getElementById("description");
 const btnModal = document.getElementById("buttonRandom");
 const btnClose = document.getElementById("btnCloseModal");
-const modal = document.getElementById("videoOfTheDay")
+const modal = document.getElementById("videoOfTheDay");
+const btnAgain = document.getElementById("btnAgain");
+const btnOtherTrack = document.getElementById("btnOtherTrack")
 
-// Función que carga el nombre de user al clickear el primer botón
+// Funció que carga el nombre de user y ejectuta la carga de preguntas al clickear el primer botón
 function loadName() {
     buttonStart.addEventListener("click", () => {
         nameTag.innerText = `Hey ${nameInput.value}!`;
-    })
+    });
+    buttonStart.addEventListener('click', () => {
+        requestQuestions(showQuestion);
+    },
+    // El evento solo puede suceder una vez con este parámetro
+    {once:true}
+    )
 }
 
 // Función que hace el request de los videos random a través de AJAX
@@ -77,7 +84,6 @@ function requestQuestions(cbReqQuestions) {
 
 // Función que muestra las preguntas con sus posibles respuestas
 function showQuestion(questionsList) {
-    buttonStart.addEventListener('click', () => {
     if (questionsList) {
        // Itera la lista de preguntas para renderizarlas
         for (let i = 0; i < questionsList.length; i++) {
@@ -147,7 +153,6 @@ function showQuestion(questionsList) {
             requestResults(showVideo);
         })
     }
-    })
 }
 
 // Función que hace el request de los datos de resultados a través de AJAX
@@ -243,5 +248,26 @@ function showVideo(resultsList) {
                     break;     
                 }
             }
+            // Agrega el botón para jugar de nuevo
+            btnAgain.addEventListener('click', () => {
+                thirdSection.innerHTML = "";
+                thirdSection.style.display = "none";
+                divQuestion.innerHTML = "";
+                secondSection.style.display = "block";
+                requestQuestions(showQuestion);
+                },
+                {once: true}
+            );
+            btnAgain.style.display = "inline-block";
+
+            // Agrega otro botón para ir a la siguiente canción random
+            btnOtherTrack.addEventListener('click', () => {
+                divSong.innerHTML = "";
+                divArtist.innerHTML = "";
+                divVideo.innerHTML = "";
+                divDescription.innerHTML = "";
+                requestResults(showVideo);
+            });
+            btnOtherTrack.style.display = "inline-block";
         }
 }

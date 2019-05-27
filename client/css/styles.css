@@ -260,18 +260,27 @@ iframe {
     #song {
         display: block;
         font-family: 'Dhurjati', sans-serif;
+        font-size: 2.2em;
     }
     #artist {
         display: block;
         font-family: 'Grand Hotel', cursive;
+        font-size: 2.5em;
+        margin-bottom: 1%;
     }
     #video {
         display: block;
-
     }
     #description {
         display: block;
         font-family: 'Catamaran', sans-serif;
+        font-size: 1.3em;
+        margin-bottom: 1%;
+    }
+    #btnOtherTrack,
+    #btnAgain {
+        display: none;
+        font-size: 1.3em;
     }
 /* END THIRD SECTION (RESULTS) */
 
@@ -284,23 +293,50 @@ footer {
 
 /* MEDIA QUERIES */
 @media all and (max-width: 30em) {
+    header p,
+    .start p,
+    #nameInput,
+    #nameTag {
+        display: none;
+    }
+    .nav {
+        width: 25%;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .start {
+        display: block;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin: 2% 0 2% 0;
+        background: none;
+    }
     .button-one {
         display: block;
-        margin: 0.4em auto;
-    }
-    #nameInput {
-        display: block;
-        margin: 0.4em auto;
-        cursor: text !important;
+        margin: 0.4em 2%;
     }
     .button-big {
         font-size: 1.4em;
         display: block;
+        width: 95%;
+    }
+    #secondSection {
+        position: relative;
+        top: 45%;
+    }
+    #selectedResult {
+        font-size: 1em;
+    }
+    iframe {
+        width: 100%;
     }
 }
 
-/*
-@media screen and (max-width: 768px) {
+
+@media all and (max-width: 768px) {
     
 }
-*/
+
