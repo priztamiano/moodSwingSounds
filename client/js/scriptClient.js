@@ -187,7 +187,7 @@ function showVideo(resultsList) {
     } else {
         // Sino, alerto que faltan respuestas. TO DO: cambiar alert por modal con estilado 
         alert('Completa todo el cuestionario para obtener tu resultado :)');
-        document.getElementById("selectedResult").style.display = "none";
+        thirdSection.style.display = "none";
     }
         // Si existe la lista de resultados (obtenida por AJAX) y cada pregunta tiene respuesta, muestro los puntajes
         if (resultsList && selectedOptions.length == 5) {

@@ -81,7 +81,7 @@ iframe {
         font-size: 1.5em;
     }
     .nav i:hover {
-        color: #FAAB49;
+        color: sandybrown;
     }
 
     /* INPUT + BUTTON + VIDEO OF THE DAY */
@@ -91,7 +91,7 @@ iframe {
         width: 45%;
         height: 50vh;
         border-radius: 0.12em;
-        background: #FAAB49;
+        background: sandybrown;
         color: beige;
         text-transform: uppercase;
         font-size: 1.2em;
@@ -213,13 +213,13 @@ iframe {
     }
     .button-two {
         text-align: center;
-        border: 0.4em solid #FAAB49;
-        background-color: #FAAB49;
+        border: 0.4em solid sandybrown;
+        background-color: sandybrown;
     }
     .button-two:hover, .selected {
         color: #000000;
-        background-color: #FD5B78;
-        border: 0.4em solid #FD5B78;
+        background-color: lightcoral;
+        border: 0.4em solid lightcoral;
         color: beige;
     }
     .img-gif {
@@ -236,6 +236,7 @@ iframe {
     }
     #buttonNext {
         display: none;
+        font-size: 1.3em;
     }
 /* END SECOND SECTION (QUESTIONS) */
 
@@ -259,14 +260,16 @@ iframe {
     }
     #song {
         display: block;
-        font-family: 'Dhurjati', sans-serif;
-        font-size: 2.2em;
+        font-family: 'Catamaran', sans-serif;
+        font-size: 2em;
+        color: lightcoral;
     }
     #artist {
         display: block;
         font-family: 'Grand Hotel', cursive;
         font-size: 2.5em;
         margin-bottom: 1%;
+        color: lightcoral;
     }
     #video {
         display: block;
