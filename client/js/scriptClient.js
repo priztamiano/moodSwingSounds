@@ -21,14 +21,14 @@ const modal = document.getElementById("videoOfTheDay");
 const btnAgain = document.getElementById("btnAgain");
 const btnOtherTrack = document.getElementById("btnOtherTrack")
 
-// Funció que carga el nombre de user y ejectuta la carga de preguntas al clickear el primer botón
+// Función que carga el nombre de user y ejectuta la carga de preguntas al clickear el primer botón
 function loadName() {
     buttonStart.addEventListener("click", () => {
         nameTag.innerText = `Hey ${nameInput.value}!`;
     });
     buttonStart.addEventListener('click', () => {
         requestQuestions(showQuestion);
-    },
+        },
     // El evento solo puede suceder una vez con este parámetro
     {once:true}
     )
@@ -151,7 +151,9 @@ function showQuestion(questionsList) {
         buttonNext.style.display = "inline-block";
         buttonNext.addEventListener('click', () => {
             requestResults(showVideo);
-        })
+            },
+        {once: true}
+        );
     }
 }
 
@@ -248,17 +250,6 @@ function showVideo(resultsList) {
                     break;     
                 }
             }
-            // Agrega el botón para jugar de nuevo
-            btnAgain.addEventListener('click', () => {
-                thirdSection.innerHTML = "";
-                thirdSection.style.display = "none";
-                divQuestion.innerHTML = "";
-                secondSection.style.display = "block";
-                requestQuestions(showQuestion);
-                },
-                {once: true}
-            );
-            btnAgain.style.display = "inline-block";
 
             // Agrega otro botón para ir a la siguiente canción random
             btnOtherTrack.addEventListener('click', () => {
@@ -266,8 +257,30 @@ function showVideo(resultsList) {
                 divArtist.innerHTML = "";
                 divVideo.innerHTML = "";
                 divDescription.innerHTML = "";
+            })
+            btnOtherTrack.addEventListener('click', () => {
                 requestResults(showVideo);
-            });
+                },
+            {once: true}
+            );
             btnOtherTrack.style.display = "inline-block";
+
+            // TO DO : AGREGAR BOTÓN PARA JUGAR NUEVAMENTE
+            // Agrega el botón para jugar de nuevo
+            // btnAgain.addEventListener('click', () => {
+            //     divQuestion.innerHTML = "";
+            //     divSong.innerHTML = "";
+            //     divArtist.innerHTML = "";
+            //     divVideo.innerHTML = "";
+            //     divDescription.innerHTML = "";
+            //     thirdSection.style.display = "none";
+            //     secondSection.style.display = "block";            
+            // });
+            // btnAgain.addEventListener('click', () => {
+            //     requestQuestions(showQuestion);
+            //     },
+            // {once: true}
+            // );
+            // btnAgain.style.display = "inline-block";
         }
 }
